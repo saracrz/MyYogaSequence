@@ -19,20 +19,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  role: {
-    type: String,
-    enum: ['host', 'regular'],
-    required: false,
-    default: 'regular'
-  },
-  birthDate: {
-    type: Number,
-    required: false
-  },
-  createdAt: {
-    type: Number,
-    default: Date.now() // Get a timestamp :)
-  }
+ 
 })
 
 const userModel = mongoose.model('user', userSchema)
