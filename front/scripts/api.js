@@ -31,11 +31,12 @@ function API() {
       .post("auth/signup", newUser)
       .then(function (response) {
         localStorage.setItem("token", response.data.token);
-        localStorage.setItem("name", response.data.name);
+        localStorage.setItem("name", response.data.username);
         localStorage.setItem("email", response.data.email);
+        window.location.assign('index.html')
       })
       .catch(function (error) {
-        console.log(error.response);
+        alert('Email already in use. Please Login instead');
       });
   }
 }
