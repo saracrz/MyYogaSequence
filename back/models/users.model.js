@@ -15,6 +15,11 @@ const userSchema = new mongoose.Schema({
     },
     unique: [true, 'This is email is registered']
   },
+  photoURL: {
+      type: String,
+      default: '../IMG/perfil.jpg'
+
+  },
   password: {
     type: String,
     required: true

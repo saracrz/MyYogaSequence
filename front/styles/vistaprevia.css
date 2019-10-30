@@ -1,6 +1,13 @@
+.img-thumbnail {
+  
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .50rem;
+  max-width: 100%;
+  height: auto;
+}
 
-
-.container-fluid {
+/* .container-fluid {
   
   background-color: rgba(245, 234, 225, 0.92);
   
@@ -34,7 +41,7 @@ h3 {
   float: right;
   color: #007bff;
   border-color: #007bff;
-}
+} */
 
 /* body {
   background-color: rgba(245, 234, 225, 0.92);

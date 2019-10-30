@@ -29,7 +29,7 @@ function signup (req, res) {
       return res.json({ token: token, ...userData })
     })
     .catch((err) => {
-      res.status(403).json({ error: err })
+      res.status(400).json({ error: err })
     })
 }
 

@@ -1,18 +1,62 @@
+/* .profile-header-container {
+  margin: 0 auto;
+  text-align: center;
+} */
 
+#user-photo{
+ width: 30px;
+ height: 30px;
+ border: 2px solid rgb(203, 203, 203);
+ margin-top: 20px;
+ padding: 40px;
+ margin-bottom: 150px;
+ border-radius: 50%;
+ background-image: url("../IMG/perfil.jpg");
+ background-position: center;
+ background-size: cover;
+ float: right;
+}
+.flex-right {justify-content: flex-end;}
+
+.container {
+  /* background-color: rgba(245, 234, 225, 0.92); */
+  min-height: 100vh;
+  min-width: 100vh;
+  /* margin: 0px; */
+  /* margin-right: 0px; */
+
+}
+body {
+  min-width: 100vh;
+  line-height: 1;
+  background-color:rgba(245, 234, 225, 0.92);
+}
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem;
+}
 
 .container-fluid {
   
   background-color: rgba(245, 234, 225, 0.92);
-  
 
   min-height: 100vh;
   
-
 }
+/*
 .bg-image {
   margin-top: 140px;
-  background-image: url('../IMG/yoga2.png');
-  background-size: 370px;
+  background-image: url('../IMG/yogadepie.png');
+  background-size: 475px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -34,7 +78,7 @@ h3 {
   float: right;
   color: #007bff;
   border-color: #007bff;
-}
+} */
 
 /* body {
   background-color: rgba(245, 234, 225, 0.92);
