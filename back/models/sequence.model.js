@@ -8,7 +8,20 @@ const sequenceSchema = new mongoose.Schema({
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
+  },
+  comments : {
+    type : String,
+    minlength : [25 , "Minimum 25 characters"],
+    required: [true, 'Comments is required']
+  },
+  asanas : [{
+
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'asanas'
   }
+
+  ]
+
 
 })
 

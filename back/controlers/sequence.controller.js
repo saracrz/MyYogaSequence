@@ -10,7 +10,7 @@ module.exports = {
 
 function getAllSequences(req, res) {
   SequenceModel
-    .find()
+    .find({owner: res.locals.user._id})
     .then(response => res.json(response))
     .catch((err) => handdleError(err, res))
 }
@@ -24,7 +24,11 @@ function getSequenceById(req, res) {
 
 function createSequence(req, res) {
   SequenceModel
-    .create(req.body)
+    .create({
+      name: req.body.name,
+      comments: req.body.comments,
+      owner: res.locals.user._id
+    })
     .then(response => res.json(response))
     .catch((err) => handdleError(err, res))
 }

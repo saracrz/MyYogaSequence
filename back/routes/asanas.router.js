@@ -8,10 +8,10 @@ const {
   updateAsana
 } = require('../controlers/asanas.controller')
 
-router.get('/', getAllAsanas)
+router.get('/', authenticate, getAllAsanas)
 router.get('/:id', getAsanaById)
-router.post('/', createAsana)
+router.post('/', authenticate, createAsana)
 router.delete('/:id', deleteAsanaById)
-router.put('/:id', updateAsana)
+router.put('/:id', authenticate, updateAsana)
 
 module.exports = router

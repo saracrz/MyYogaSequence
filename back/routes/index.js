@@ -7,6 +7,6 @@ const asanasRouter = require('./asanas.router')
 
 router.use('/auth', authRouter)
 router.use('/users', authenticate, usersRouter)
-router.use('/sequence', authenticate, sequenceRouter)
+router.use('/sequences', authenticate, sequenceRouter)
 router.use('/asanas', authenticate, asanasRouter)
 module.exports = router

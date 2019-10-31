@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const authenticate = require('../middlewares/authenticate')
 
 const {
   getAllSequences,
@@ -8,9 +9,9 @@ const {
   updateSequence
 } = require('../controlers/sequence.controller')
 
-router.get('/', getAllSequences)
+router.get('/', authenticate, getAllSequences)
 router.get('/:id', getSequenceById)
-router.post('/', createSequence)
+router.post('/', authenticate, createSequence)
 router.delete('/:id', deleteSequenceById)
 router.put('/:id', updateSequence)
 

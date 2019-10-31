@@ -24,7 +24,7 @@ function getAsanaById(req, res) {
 
 function createAsana(req, res) {
   AsanasModel
-    .create(req.body)
+    .insertMany(req.body)
     .then(response => res.json(response))
     .catch((err) => handdleError(err, res))
 }

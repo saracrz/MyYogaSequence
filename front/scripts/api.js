@@ -29,7 +29,7 @@ function API() {
   this.signup = function (newUser) {
     this.api_base
       .post("auth/signup", newUser)
-      .then(function (response) {
+      .then(response => {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("name", response.data.username);
         localStorage.setItem("email", response.data.email);
@@ -38,6 +38,42 @@ function API() {
       .catch(function (error) {
         alert('Email already in use. Please Login instead');
       });
+  };
+this.sequences = function () {
+  return this.api_base
+    .get("sequences", {
+      headers: {
+        access_token: localStorage.getItem("token")
+      }
+    })
+    .then(response => {
+      return response.data
+    })
+}
+this.asanas = function () {
+  return this.api_base
+    .get("asanas", {
+      headers: {
+        access_token: localStorage.getItem("token")
+      }
+    })
+    .then(response => {
+      return response.data
+    })
+}
+  this.createNewSequence = function(newSequence) {
+    return this.api_base
+      .post("sequences", newSequence,  {
+        headers: {
+          access_token: localStorage.getItem("token")
+        }
+      })
+      .then(response => {
+
+        console.log('Api respondioó');
+        
+        return response.data
+      })
   }
 }
 const api = new API();
