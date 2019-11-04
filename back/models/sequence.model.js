@@ -9,19 +9,15 @@ const sequenceSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
   },
-  comments : {
-    type : String,
-    minlength : [25 , "Minimum 25 characters"],
+  comments: {
+    type: String,
+    minlength: [25, 'Minimum 25 characters'],
     required: [true, 'Comments is required']
   },
-  asanas : [{
-
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'asanas'
-  }
-
-  ]
-
+  asanas: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'asanas'
+  }]
 
 })
 

@@ -15,9 +15,11 @@ function getAllSequences(req, res) {
     .catch((err) => handdleError(err, res))
 }
 
+
 function getSequenceById(req, res) {
   SequenceModel
     .findById(req.params.id)
+    .populate('asanas')
     .then(response => res.json(response))
     .catch((err) => handdleError(err, res))
 }
@@ -27,7 +29,8 @@ function createSequence(req, res) {
     .create({
       name: req.body.name,
       comments: req.body.comments,
-      owner: res.locals.user._id
+      owner: res.locals.user._id,
+      asanas : req.body.asanas
     })
     .then(response => res.json(response))
     .catch((err) => handdleError(err, res))

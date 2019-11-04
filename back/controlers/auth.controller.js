@@ -47,7 +47,7 @@ function login (req, res) {
         const token = jwt.sign(
           userData,
           'secret', // TODO SECRET MORE SECRET PLEASE
-          { expiresIn: '1h' }
+          { expiresIn: '1d' }
         )
 
         return res.json({ token: token, ...userData })

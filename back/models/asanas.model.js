@@ -5,11 +5,7 @@ const asanasSchema = new mongoose.Schema({
     type: String,
     require: [true, "Name is required"]
   },
-  photoURL: String,
-  
-
-
-
+  photoURL: String
 })
 
 const asanasModel = mongoose.model('asanas', asanasSchema)
