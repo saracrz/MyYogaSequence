@@ -6,12 +6,14 @@ const {
   getSequenceById,
   createSequence, 
   deleteSequenceById,
+  deleteAsanaById,
   updateSequence
 } = require('../controlers/sequence.controller')
 
 router.get('/', authenticate, getAllSequences)
 router.get('/:id', getSequenceById)
 router.post('/', authenticate, createSequence)
+router.delete('/:id/asanas/:asanaID', deleteAsanaById)
 router.delete('/:id', deleteSequenceById)
 router.put('/:id', updateSequence)
 

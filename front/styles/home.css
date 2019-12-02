@@ -1,45 +1,110 @@
+body {
+  min-width: 100vh;
+  line-height: 1;
+  background-color: rgba(245, 234, 225, 0.92) !important;
+}
+
 /* .profile-header-container {
   margin: 0 auto;
   text-align: center;
 } */
 
-#user-photo{
- width: 30px;
- height: 30px;
- border: 2px solid rgb(203, 203, 203);
- margin-top: 20px;
- padding: 40px;
- margin-bottom: 150px;
- border-radius: 50%;
- background-image: url("../IMG/perfil.jpg");
- background-position: center;
- background-size: cover;
- float: right;
+#titulo{
+  font-family: 'Vidaloka', serif !important;
 }
-.flex-right {justify-content: flex-end;}
+h1 {
+  font-family: 'Vidaloka', serif !important;
+  color: hsl(0, 0%, 30%);
+  font-size: 34px !important;
+  margin-top: 18px !important;
+  width: 90%;
+}
+
+textarea.form-control {
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+
+#user-photo{
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgb(203, 203, 203);
+  /* margin-top: 20px; */
+  padding: 35px;
+  margin-bottom: 150px;
+  border-radius: 50%;
+  background-image: url("../IMG/perfilreal.jpeg");
+  background-position: center;
+  background-size: cover;
+  /* float: right; */
+}
+.flex-right {
+  justify-content: flex-end;
+}
 
 .container {
+  margin-top: 20px;
   background-color: rgba(245, 234, 225, 0.92);
   min-height: 100vh;
   min-width: 100vh;
-  margin: 0px;
-  margin-right: 0px;
-
 }
+.form-div{
+  margin: auto;
+  width: 50%;
+}
+
 .btn-lg {
   padding: .5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: .3rem;
   margin-bottom: 10px;
+  margin: 0 auto;
+  display: block;
+}
+.card-titulo{
+  margin-top: 40px;
+  /* text-align: justify; */
+  color: rgb(182, 59, 86);
+  text-align: center;
+  text-decoration: underline;
 }
 .card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1.25rem;
-    background-color:rgba(239, 211, 194, 0.92);
+  /* min-height: 250px; */
+  max-height: 275px;
+  color:rgb(80, 80, 80);
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  /* padding: 1.25rem; */
+  background-color: rgb(248, 212, 207);
+  border-radius: 10px 10px 0 0;
 }
 
+.card-sara{
+  min-height: 250px;
+  max-height: 275px;
+  border-radius: 2px;
+}
+.nueva-secuencia{
+  color: rgb(182, 59, 86);
+  background-color: rgb(248, 212, 207);
+  font-family:'Volkhov',serif;
+  font-size: 12px;
+}
+.card-asanas{
+  color: rgb(255, 255, 255)!important;
+  text-align: center;
+  background-color: rgba(248, 113, 113, 0.794);
+}
+.sequence-name{
+  margin-top: 100px;
+}
+.button-guardar-secuencia{
+  margin-top: 0;
+
+}
 
 /* .card-columns {
     /* -webkit-column-count: 3; */
@@ -51,10 +116,9 @@
     /* orphans: 1; */
     /* widows: 1; */
 
-
 .form-control {
-  display: block;
-  width: 50% !important;
+  /* display: block; */
+  /* width: 50% !important; */
   height: calc(1.5em + .75rem + 2px);
   padding: .375rem .75rem;
   font-size: 1rem;
@@ -66,50 +130,62 @@
   border: 1px solid #ced4da;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  border-radius: 10px;
 }
-body {
-  min-width: 100vh;
-  line-height: 1;
-  background-color: rgba(245, 234, 225, 0.92) !important;
+.tarjetas-asanas{
+  border-radius: 15px;
+
 }
 
 .row {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px; 
+    margin-right: -15px;
     margin-left: -15px;
 }
 
 .button-big {
+  min-height: 250px;
+  max-height: 275px;
   height: 250px;
-  width: 300px;
+  width: 350px;
   display: inline-block;
   text-align: center;
-  font-size: 80px;
-  color: darkgrey;
-  border: 3px solid grey;
-  border-radius: 8px;
+  font-size: 50px;
+  /* color: rgb(184, 184, 184); */
+  border: 0.5px solid grey;
+  border-radius: 7;
   margin-left: 30p;
+  margin-top: 20px;
+  padding: 80px;
 }
 .card {
   position: relative;
   display: -ms-flexbox;
-  display: flex;
+  /* display: flex; */
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: rgb(248, 212, 207);
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, .125);
-  border-radius: .25rem;
+}
+.card-imagen{
+  background-color: white !important;
+}
+.asana-card {
+  margin-top: 25px;
 }
 
 .container-fluid {
-  
   background-color: rgba(245, 234, 225, 0.92);
-
   min-height: 100vh;
-  
+}
+.card-img-bottom {
+    width: 100%;
+    border-bottom-right-radius: calc(.25rem - 1px);
+    border-bottom-left-radius: calc(.25rem - 1px);
+    background-color: white;
+    border-radius: 0 0 15px 15px;
 }
