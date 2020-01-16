@@ -37,6 +37,8 @@ function login (req, res) {
   UserModel
     .findOne({ email: req.body.user_email })
     .then(user => {
+      return res.json({ user })
+
       if (!user) { return res.json({ error: 'wrong email' }) }
 
       bcrypt.compare(req.body.user_password, user.password, (err, result) => {
@@ -52,8 +54,8 @@ function login (req, res) {
 
         return res.json({ token: token, ...userData })
       })
-    })
-    .catch(err => handdleError(err, res))
+      .catch(err => handdleError(err, res))
+})
 }
 
 function handdleError (err, res) {

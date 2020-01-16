@@ -10,6 +10,7 @@ module.exports = {
 }
 
 function getAllSequences(req, res) {
+  console.log(`USER: ${res.locals.user._id}`);
   SequenceModel
     .find({ owner: res.locals.user._id })
     .then(response => res.json(response))

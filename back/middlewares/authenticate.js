@@ -6,12 +6,11 @@ const authenticate = (req, res, next) => {
     
     if (err) { res.status(403).json({ error: 'Token not valid' }) }
     
-    UserModel
-      .findOne({ email: token.email })
-      .then(user => {
-        res.locals.user = user
-        next()
-      })
+    UserModel.findOne({ email: token.email }).then(user => {
+      console.log(user);
+      res.locals.user = user;
+      next();
+    });
   });
 }
 

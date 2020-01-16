@@ -7,8 +7,8 @@
   <title>My Yoga Sequence</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/signup.css">
   <link href="https://fonts.googleapis.com/css?family=Volkhov&display=swap" rel="stylesheet">
   
 </head>
@@ -25,18 +25,18 @@
               <div class="col-md-9 col-lg-8 mx-auto">
                 <h3 class="login-heading mb-4">Create Account</h3>
                   <div class="form-label-group">
-                    <input type="email" id="user_name" class="form-control" placeholder="Name" required
+                    <input type="email" id="signup_user_name" class="form-control" placeholder="Name" required
                       autofocus>
                     <label for="user_name"></label>
                   </div>
                   <div class="form-label-group">
-                    <input type="email" id="user_email" class="form-control" placeholder="Email address" required
+                    <input type="email" id="signup_user_email" class="form-control" placeholder="Email address" required
                       autofocus>
-                    <label for="user_email"></label>
+                    <label for="signup_user_email"></label>
                   </div>
   
                   <div class="form-label-group">
-                    <input type="password" id="user_password" class="form-control" placeholder="Password" required>
+                    <input type="password" id="signup_user_password" class="form-control" placeholder="Password" required>
                     <label for="user_password"></label>
                   </div>
   
@@ -46,9 +46,7 @@
                   </div>
                   <button id="btn-signup"
                     class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
-                    type="submit">Sign Up!</button>
-                  
-                
+                    type="submit">Sign Up!</button>     
               </div>
             </div>
           </div>
@@ -64,7 +62,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
-  <script src="scripts/index.js"></script>
-  <script src="scripts/signup.js"></script>
+  <script src="scripts/api.js"></script>
+  <script src="scripts/login.js"></script>  
 </body>
 </html>
