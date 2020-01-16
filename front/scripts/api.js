@@ -4,7 +4,7 @@ function API () {
   }
 
   this.api_base = axios.create({
-    baseURL: 'http://localhost:2222/api/',
+    baseURL: 'http://localhost:2223/api/',
     timeout: 1000
   })
 
@@ -13,7 +13,7 @@ function API () {
       .post('auth/login', userLogin)
       .then(response => {
         if (response.data.error) {
-          alert('YOS TODO JAKER INTENTANDO ENTRAR')
+          alert(response.data.error);
         } else {
           window.localStorage.setItem('token', response.data.token)
           window.localStorage.setItem('name', response.data.username)
