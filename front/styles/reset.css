@@ -17,11 +17,10 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  padding: 0;
+  font-size: 50%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -36,7 +35,9 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+	min-width: 100vh;
 	line-height: 1;
+	/* background-color: #fff1f1; */
 }
 
 ol, ul {
@@ -205,7 +206,8 @@ textarea {
     font-size: 100%; /* 1 */
     margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
-    *vertical-align: middle; /* 3 */
+    *
+    vertical-align: middle; /* 3 */
 }
 
 /**
@@ -246,7 +248,8 @@ input[type="reset"],
 input[type="submit"] {
     -webkit-appearance: button; /* 2 */
     cursor: pointer; /* 3 */
-    *overflow: visible;  /* 4 */
+    *
+    overflow: visible;  /* 4 */
 }
 
 /**
